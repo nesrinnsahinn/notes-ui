@@ -1,0 +1,15 @@
+<h1>Notes Uygulaması</h1>
+
+<label>Kullanıcı adı:
+  <input [(ngModel)]="username" placeholder="nesrin" />
+</label>
+<label>Şifre:
+  <input [(ngModel)]="password" type="password" placeholder="••••••" />
+</label>
+<button (click)="getNotes()">Notları Getir</button>
+
+<ul>
+  <li *ngFor="let n of notes">
+    {{ n.id }} — {{ n.title }}
+  </li>
+</ul>
